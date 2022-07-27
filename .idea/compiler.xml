@@ -2,16 +2,37 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Spring-Three" />
+        <module name="Spring-Five-Component" />
+        <module name="Spring-Fourteen-ScopeSingleton" />
         <module name="Spring-Two" />
+        <module name="Spring-Four-DefBeanPrimay" />
+        <module name="Spring-Seven1-RegisterBean" />
+        <module name="SpringBoot-Eighteen-WebApplication (1)" />
+        <module name="Spring-Six-PostConstruct" />
+        <module name="Spring-Seven-PreDestroy" />
+        <module name="SpringBoot-Eighteen-WebApplication" />
+        <module name="Spring-Twelve-AutoWire-ConnectBeans" />
+        <module name="Spring-Seventeen-AOP" />
+        <module name="Spring-Three" />
+        <module name="Spring-Nine-Wiring" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="demoproject" target="18" />
+      <module name="Spring-ElevenA-AutoWire-Class" target="18" />
+      <module name="Spring-ElevenB-AutoWire-Setter" target="18" />
+      <module name="Spring-ElevenC-AutoWire-Constructor" target="18" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="SpringBoot-Eighteen-WebApplication" options="-parameters" />
+      <module name="SpringBoot-Eighteen-WebApplication (1)" options="-parameters" />
+    </option>
   </component>
 </project>
