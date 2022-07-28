@@ -1,6 +1,8 @@
 package com.asbasic.eazyschool.controller;
 
 import com.asbasic.eazyschool.model.Holiday;
+import com.asbasic.eazyschool.repository.HolidaysRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,6 +23,9 @@ public class HolidaysController {
                                   @RequestParam(required = false) boolean federal,
                                   Model model) { */
     // using path variables like /holidays/all or /holidays/federal or /holidays/festival
+    @Autowired
+    private HolidaysRepository holidaysRepository;
+
     @GetMapping("/holidays/{display}")
     public String displayHolidays(@PathVariable String display, Model model) {
         /* required = false means that this request parameter is optional*/
@@ -36,7 +41,9 @@ public class HolidaysController {
             model.addAttribute("festival", true);
         }
 
+        List<Holiday> holidays = holidaysRepository.findAllHolidays();
 
+        /*
         List<Holiday> holidays = Arrays.asList(
                 new Holiday(" Jan 1 ","New Year's Day", Holiday.Type.FESTIVAL),
                 new Holiday(" Oct 31 ","Halloween", Holiday.Type.FESTIVAL),
@@ -46,7 +53,7 @@ public class HolidaysController {
                 new Holiday(" July 4 ","Independence Day", Holiday.Type.FEDERAL),
                 new Holiday(" Sep 5 ","Labor Day", Holiday.Type.FEDERAL),
                 new Holiday(" Nov 11 ","Veterans Day", Holiday.Type.FEDERAL)
-        );
+        );*/
         Holiday.Type[] types = Holiday.Type.values();
         for (Holiday.Type type : types) {
             model.addAttribute(type.toString(),
