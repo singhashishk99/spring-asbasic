@@ -16,10 +16,12 @@
         <module name="Spring-Six-PostConstruct" />
         <module name="Spring-Seven-PreDestroy" />
         <module name="SpringBoot-Eighteen-WebApplication" />
+        <module name="SpringBoot-Twenty-WebApplication" />
         <module name="Spring-Twelve-AutoWire-ConnectBeans" />
         <module name="Spring-Seventeen-AOP" />
         <module name="Spring-Three" />
         <module name="Spring-Nine-Wiring" />
+        <module name="SpringBoot-TwentyTwo-EazySchool-MySql" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -33,6 +35,8 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="SpringBoot-Eighteen-WebApplication" options="-parameters" />
       <module name="SpringBoot-Eighteen-WebApplication (1)" options="-parameters" />
+      <module name="SpringBoot-Twenty-WebApplication" options="-parameters" />
+      <module name="SpringBoot-TwentyTwo-EazySchool-MySql" options="-parameters" />
     </option>
   </component>
 </project>

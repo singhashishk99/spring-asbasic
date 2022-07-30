@@ -2,5 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/SpringBoot-TwentyFour-EazySchool-RegisterUser" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/SpringBoot-TwentyThree-EazySchool-JPA" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/SpringBoot-TwentyTwo-EazySchool-MySql" vcs="Git" />
   </component>
 </project>
